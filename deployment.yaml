@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-calculator
+  namespace: namespace-calculator
+  labels:
+    app: app-calculator
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: app-calculator
+  template:
+    metadata:
+      labels:
+        app: app-calculator
+    spec:
+      containers:
+      - name: c-calculator
+        image: raemondarellano/calculator:latest
+        ports:
+        - containerPort: 80
