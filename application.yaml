@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/iam-arellano/simple-calculator.git
+    repoURL: https://github.com/iam-arellano/gitops-simple-calculator
     targetRevision: HEAD
     path: /                   # path of your yaml manifest
   destination:
