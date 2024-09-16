@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/iam-arellano/gitops-simple-calculator
     targetRevision: HEAD
-    path: /                   # path of your yaml manifest
+    path: .                   # path of your yaml manifest
   destination:
     server: https://kubernetes.default.svc
     namespace: namespace-calculator
