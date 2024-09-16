@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: deployment-calculator:1.0.0-8
-  namespace: namespace-calculator:1.0.0-8
+  # namespace: namespace-calculator:1.0.0-8
   labels:
     app: app-calculator:1.0.0-8
 spec:

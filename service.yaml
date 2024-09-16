@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: service-calculator
-  namespace: namespace-calculator
+  # namespace: namespace-calculator
 spec:
   selector:
     app: app-calculator
