@@ -5,7 +5,7 @@ metadata:
   # namespace: namespace-calculator
 spec:
   selector:
-    app: app-calculator
+    app: calculator-app
   type: LoadBalancer
   ports:
     - port: 80
