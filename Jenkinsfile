@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-              APP_NAME = "calculator"
+              APP_NAME = "my-calculator"
     }
 
     stages {
@@ -17,7 +17,8 @@ pipeline {
                }
         }
 
-        stage("Update the Deployment Tags") {
+
+         stage("Update the Deployment Tags") {
             steps {
                 sh """
                    cat deployment.yaml
