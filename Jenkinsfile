@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-         APP_NAME = "my-calculator-pipeline"
+         APP_NAME = "my-calculator"
     }
 
     stages {
