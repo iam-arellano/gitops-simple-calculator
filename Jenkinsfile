@@ -1,7 +1,8 @@
-pipeline {
+pipeline { 
     agent any
+
     environment {
-             APP_NAME = "my-calculator-pipeline"
+         APP_NAME = "my-calculator-pipeline"
     }
 
     stages {
@@ -15,9 +16,8 @@ pipeline {
                steps {
                    git branch: 'main', credentialsId: 'github', url: 'https://github.com/iam-arellano/gitops-simple-calculator'
                
+            }
         }
-
-
          stage("Update the Deployment Tags") {
             steps {
                 sh """
