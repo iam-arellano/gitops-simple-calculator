@@ -28,10 +28,9 @@ pipeline {
             }
         }
 
-         stage("Push the changed deployment file to Git") {
+        stage("Push the changed deployment file to Git") {
             steps {
                 sh """
-
                    git config --global user.name "raemond.arellano01@gmail.com"
                    git config --global user.email "raemond.arellano01@gmail.com"
                    git add deployment.yaml
@@ -42,6 +41,6 @@ pipeline {
                 }
             }
         }
-      
+        
     }
 }
