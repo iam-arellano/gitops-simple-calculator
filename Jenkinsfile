@@ -35,8 +35,8 @@ pipeline {
                    git config --global user.email "raemond.arellano01@gmail.com"
                    git add deployment.yaml
                    git commit -m "Updated Deployment Manifest"
+                   set +e
                 """
-                sh 'set +e'
                 withCredentials([gitUsernamePassword(credentialsId: 'github_token', gitToolName: 'Default')]) {
                   sh "git push https://github.com/iam-arellano/gitops-simple-calculator  main"
                 }
