@@ -14,10 +14,9 @@ pipeline {
 
         stage("Checkout from SCM") {
                steps {
-                   git branch: 'main', credentialsId: 'github', url: 'https://github.com/iam-arellano/gitops-simple-calculator'
-               
-            }
-        }
+                   git branch: 'main', credentialsId: 'github', url: 'https://github.com/iam-arellano/gitops-simple-calculator'                 
+                }
+           }
          stage("Update the Deployment Tags") {
             steps {
                 sh """
@@ -25,8 +24,8 @@ pipeline {
                    sed -i 's/${APP_NAME}.*/${APP_NAME}:${IMAGE_TAG}/g' deployment.yaml
                    cat deployment.yaml
                 """
-            }
-        }
+                 }
+             }
 
         stage("Push the changed deployment file to Git") {
             steps {
@@ -37,7 +36,6 @@ pipeline {
                    git commit -m "Updated Deployment Manifest"
                    
                 """
-                sh 'set +e'
                 withCredentials([gitUsernamePassword(credentialsId: 'github_token', gitToolName: 'Default')]) {
                   sh "git push https://github.com/iam-arellano/gitops-simple-calculator  main"
                 }
