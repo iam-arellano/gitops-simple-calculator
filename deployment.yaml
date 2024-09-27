@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: c_calculator
-        image: raemondarellano/my-calculator:1.0.0-16
+        image: raemondarellano/my-calculator:1.0.0-44
         ports:
         - containerPort: 80 
