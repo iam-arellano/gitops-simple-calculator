@@ -15,7 +15,7 @@ spec:
         app: calculator-app
     spec:
       containers:
-      - name: c-calculator
-        image: raemondarellano/my-calculator:1.0.0-45
+      - name: c_calculator
+        image: raemondarellano/my-calculator:1.0.0-46
         ports:
         - containerPort: 80 
